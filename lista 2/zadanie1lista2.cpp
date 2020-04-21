@@ -1,28 +1,28 @@
 #include <iostream>
+#include <climits>
 #include <vector>
-#include <algorithm>
-using namespace std;
 
+int smallest_value(std::vector<int> x){
 
-int findSmallestElement(vector <int> vector)
-{
-    if (vector.empty())
-    {
-        return INT8_MIN;
+    int smallest_value = x[0];
+
+    if (!x.empty()){
+        for (int i = 0; i < x.size()-1; ++i){
+            if (smallest_value > x[i+1]){
+                smallest_value = x[i+1];
+            }
+        }
+        return smallest_value; 
+        }
+
+    else {
+        return INT_MIN;
     }
-    
-    else 
-    {
-        int min = *min_element(vector.begin(), vector.end());
-        return min;
-    }
+
 }
 
-int main()
-{
-	
-    vector<int> v = {7, 5, 16, 8};
-    cout << findSmallestElement(v) << endl;
-    return 0;
-    
+int main(){
+    std::vector<int> x = {892, 234, 3, -123, 5};
+    std::cout << smallest_value(x) << "\n";
+
 }
