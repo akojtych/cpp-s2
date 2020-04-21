@@ -1,0 +1,2 @@
+Każdy kompilator posiada własną architekturę która przetrwarza kod napisany w języku źródłowym na równoważny kod w języku wynikowym.
+Przykładem jest zadanie 5. 
