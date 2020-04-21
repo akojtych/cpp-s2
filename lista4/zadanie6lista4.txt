@@ -1,0 +1,15 @@
+std::ostream&operator<<(std::ostream&F;X const& arg)
+{
+	return F<<arg._x;
+}
+
+
+std::ostream&operator<<(std::otream&F;X const& arg)
+{ 
+	return F<<arg;
+}
+
+Zadanie 6 na stronie 130:
+brakuje przy zmiennej arg "_"
+
+zamiast return F<<arg; powinno byc return F<<_arg;
