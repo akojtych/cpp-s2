@@ -1,0 +1,31 @@
+wydruk 4.5
+void kopiuj(char*dokad,const char*skad)
+{
+	while(*dokad++=*skad++)
+		continue;
+}
+int main()
+{
+	char bufor[200];
+	kopiuj(bufor,"Ala ma kota");
+	std::cout<<"tekst"<<bufor<<""'ma dlugosc"<<strlen(bufor)<<"\n";
+}
+
+ZADANIE 1. 
+podpunkt A) Który z operatorów użytych w wyrażeniu warunkowym pętli while ma najwyższy, a który najniższy priorytet?
+najwyzszy - ++ 
+najnizszy - = 
+
+podpunkt B)Jak działa i jaką wartość zwraca przedrostkowy operator ++?
+Przy 'bufor odpowiada za przeskakiwanie przez nastepne elementy tablicy, a przy 'skad' za przemieszczanie sie po kolejnyc znakach ciagu tekstowego.
+
+podpunkt C) Do czego służy jednoargumentowy operator*?
+Konwertuje adres pamięci odczytany na wartość przepisaną do adresu 
+
+podpunkt D) Jaka wartość zwraca operator przypisania?
+Wczytuje tekst jako argument i zwraca z niego kolejno wartosci pol.
+
+podpunkt E)Jak interpretowane jest wyrażenie warunkowe w pętli while, jeżeli zamaiast
+wyrażenia logicznego (o wartości true lub false) pojawia się w nim wyrażenie arytmetyczne?
+Jeżeli użyjemy liczby 0, to pętla otrzyma false i się nie będzie wykonywać, 
+jeżeli otrzyma liczbę z przedziału {-nieskonczonosc;nieskonczonosc}\0  to bedzie sie wykonywac
