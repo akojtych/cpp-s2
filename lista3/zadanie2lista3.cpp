@@ -17,7 +17,7 @@ int main()
     //podpunkt F
     double (*func)(double*, int)
     //podpunkt G
-    int *g;
-    int funkcja(*g);
+    int x=5;
+    funkcja(&x);
     return 0;
 }
