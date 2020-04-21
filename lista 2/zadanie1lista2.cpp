@@ -25,4 +25,5 @@ int main(){
     std::vector<int> x = {892, 234, 3, -123, 5};
     std::cout << smallest_value(x) << "\n";
 
+    
 }
