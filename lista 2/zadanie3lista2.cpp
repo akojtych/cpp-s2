@@ -1,28 +1,31 @@
 #include <iostream>
 #include <vector>
 
-std::vector<double> operator* (std::vector<double> a, std::vector<double> b){
+using namespace std;
 
-   std::vector<double> wynik (a.size());
-
-    for (int i = 0; i < a.size(); ++i){
-                wynik[i] = a[i]*b[i];
+double operator*(const vector<double>& v, const vector<double>& w)
+{
+    if (v.size() != w.size())
+    {
+        cout << "Wektory nie są jednakowej długości!" << endl;
+        return 0;
+    }
+    else
+    {
+        double wynik = 0;
+        for(int i = 0; i < v.size(); i++)
+        {
+            wynik += v[i] * w[i];
         }
-    
-    return wynik;
-
+        return wynik;
+    }
 }
 
-int main(){
-
-    std::vector<double> a = {2, 2, 2};
-    std::vector<double> b = {2, 2, 2};
-
-    std::vector<double> c = a*b;
-
-    for (int i = 0; i < c.size(); ++i){
-        std::cout << c[i] << "\n";
-    }
-
+int main()
+{
+    vector<double> v = {2,1};
+    vector<double> w = {2,1};
+    cout << v * w << endl;
+    return 0;
 }
 
